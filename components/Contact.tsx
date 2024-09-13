@@ -67,7 +67,7 @@ export default function Contact() {
                     </motion.article>
 
                     <motion.article 
-                        className="bg-white py-8 px-8 w-[400px] mx-auto mt-8"
+                        className="bg-white py-8 px-8 w-[340px] lg:w-[450px]  mx-auto mt-8"
                         initial={{ opacity: 0, y: 50 }}
                         animate={isVisible ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8 }}
