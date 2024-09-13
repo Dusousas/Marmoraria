@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.maxWidth{
+  margin: 0 auto;
+  padding: 0 2%;
+  max-width: 1620px;
+}
+
+/* BACKGROUNDS */
+
+.MainBG{
+  background-image: url('../public/MainBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.ServiceBG{
+  background-image: url('../public/ServiceBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.AboutBG{
+  background-image: url('../public/AboutBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ProjectBG{
+  background-image: url('../public/ProjectBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ContactBG{
+  background-image: url('../public/ContactBG.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/* FORMULARIO */
+
+input::placeholder {
+  color: #505050;
+  font-weight: 500;
+}
+
+textarea::placeholder {
+  color: #505050;
+  font-weight: 500;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-container .icon {
+  position: absolute;
+  left: 10px; /* Ajuste conforme necessário */
+  pointer-events: none;
+}
+
+.input-container input {
+  padding-left: 40px; /* Ajuste para criar espaço suficiente para o ícone */
+  width: 100%;
+}
+
+
+
+
+
