@@ -67,7 +67,7 @@ const NavBar: React.FC = () => {
                     </div>
                     <div className="lg:hidden">
                         <button onClick={toggleMenu} className={isScrolled ? 'text-black focus:outline-none' : 'text-white focus:outline-none'}>
-                            <svg className="w-8 h-8 hover:text-[#D6181A]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-8 h-8 hover:text-OrangeP" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 {isOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                                 ) : (
@@ -77,7 +77,10 @@ const NavBar: React.FC = () => {
                         </button>
                     </div>
 
-                    <nav className={`lg:flex ${isOpen ? 'block' : 'hidden'} text-center ${isScrolled ? 'bg-white' : 'bg-transparent'} flex flex-col items-center justify-center nav gap-8 absolute left-0 z-10 top-[61px] uppercase w-full py-3 lg:flex lg:h-[39px] lg:flex-row lg:static lg:w-auto lg:bg-transparent`}>
+                    <nav 
+    className={`lg:flex ${isOpen ? 'block bg-OrangeP' : 'hidden'} text-center flex flex-col items-center justify-center nav gap-8 absolute left-0 z-10 top-[61px] uppercase w-full py-3 lg:flex lg:h-[39px] lg:flex-row lg:static lg:w-auto lg:bg-transparent`}
+>
+
                         <ScrollLink duration={500} offset={0} to='main' smooth={true} onClick={closeMenu}>
                             <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === 'main' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Início</span>
                         </ScrollLink>
