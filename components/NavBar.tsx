@@ -1,11 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import React from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavBar: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [activeSection, setActiveSection] = useState('');
-    const [isScrolled, setIsScrolled] = useState(false);
+    const router = useRouter();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -14,22 +16,6 @@ const NavBar: React.FC = () => {
     const closeMenu = () => {
         setIsOpen(false);
     };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 0) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     useEffect(() => {
         const sections = document.querySelectorAll('section');
@@ -58,15 +44,27 @@ const NavBar: React.FC = () => {
         };
     }, []);
 
+    const handleNavigation = (sectionId: string) => {
+        if (router.pathname === '/') {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        } else {
+            router.push(`/#${sectionId}`);
+        }
+        closeMenu();
+    };
+
     return (
         <>
-            <header className={`py-3 w-full fixed z-10 transition-all ${isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'}`}>
+            <header className="py-3 bg-white fixed w-full z-20">
                 <div className="flex justify-between items-center maxWidth">
-                    <div className='flex flex-col items-center'>
-                        <a href="" className={isScrolled ? 'text-black text-3xl uppercase font-black' : 'text-white text-3xl uppercase font-black'}>Logotipo</a>
+                    <div>
+                        <a className='text-black uppercase font-black text-2xl font-Oswald ' href="#">Sua Concessionária</a>
                     </div>
                     <div className="lg:hidden">
-                        <button onClick={toggleMenu} className={isScrolled ? 'text-black focus:outline-none' : 'text-white focus:outline-none'}>
+                        <button onClick={toggleMenu} className="text-black focus:outline-none">
                             <svg className="w-8 h-8 hover:text-OrangeP" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 {isOpen ? (
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -77,35 +75,15 @@ const NavBar: React.FC = () => {
                         </button>
                     </div>
 
-                    <nav 
-    className={`lg:flex ${isOpen ? 'block bg-OrangeP' : 'hidden'} text-center flex flex-col items-center justify-center nav gap-8 absolute left-0 z-10 top-[61px] uppercase w-full py-3 lg:flex lg:h-[39px] lg:flex-row lg:static lg:w-auto lg:bg-transparent`}
->
-
-                        <ScrollLink duration={500} offset={0} to='main' smooth={true} onClick={closeMenu}>
-                            <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === 'main' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Início</span>
-                        </ScrollLink>
-
-                        <ScrollLink duration={500} offset={-70} to='services' smooth={true} onClick={closeMenu}>
-                            <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === 'services' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Serviços</span>
-                        </ScrollLink>
-
-                        <ScrollLink duration={500} offset={-80} to='about' smooth={true} onClick={closeMenu}>
-                            <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === 'about' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Sobre</span>
-                        </ScrollLink>
-
-                        <ScrollLink duration={500} offset={-80} to='projects' smooth={true} onClick={closeMenu}>
-                            <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === 'projects' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Projetos</span>
-                        </ScrollLink>
-
-                        <ScrollLink duration={500} offset={-80} to='contact' smooth={true} onClick={closeMenu}>
-                            <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === 'contact' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Contato</span>
-                        </ScrollLink>
-
-                        {/* <ScrollLink duration={500} offset={0} to='' smooth={true} onClick={closeMenu}>
-                            <span className={`block py-2 cursor-pointer ${isScrolled ? 'text-black' : 'text-white'} ${activeSection === '' ? 'border-b-[2px] lg:border-b border-OrangeP' : ''}`}>Pedras Decorativas</span>
-                        </ScrollLink> */}
-
-                        {/* <a className={`block px-4 py-2 cursor-pointer ${isScrolled ? 'text-white bg-OrangeP' : 'text-white bg-OrangeP'} rounded`}>Orçamento</a> */}
+                    <nav className={`lg:flex text-black font-semibold ${isOpen ? 'block' : 'hidden'} custom-height text-center bg-OrangeP flex flex-col gap-10 items-center justify-center absolute left-0 z-10 top-[60px] uppercase w-full lg:flex lg:h-[39px] lg:flex-row lg:static lg:w-auto lg:bg-transparent`}>
+                        <span onClick={() => handleNavigation('main')} className={`block py-2 cursor-pointer ${activeSection === 'main' ? 'border-b-[2px] lg:border-OrangeP' : ''}`}>Início</span>
+                        <span onClick={() => handleNavigation('services')} className={`block py-2 cursor-pointer ${activeSection === 'services' ? 'border-b-[2px] lg:border-OrangeP' : ''}`}>Serviços</span>
+                        <span onClick={() => handleNavigation('about')} className={`block py-2 cursor-pointer ${activeSection === 'about' ? 'border-b-[2px] lg:border-OrangeP' : ''}`}>Sobre</span>
+                        <span onClick={() => handleNavigation('projects')} className={`block py-2 cursor-pointer ${activeSection === 'projects' ? 'border-b-[2px] lg:border-OrangeP' : ''}`}>Projetos</span>
+                        <span onClick={() => handleNavigation('contact')} className={`block py-2 cursor-pointer ${activeSection === 'contact' ? 'border-b-[2px] lg:border-OrangeP' : ''}`}>Contato</span>
+                        <Link href='/pedras' passHref>
+                            <span onClick={closeMenu} className={`block py-2 cursor-pointer ${router.pathname === '/pedras' ? 'border-b-[2px] lg:border-OrangeP' : ''}`}>Pedras Decorativas</span>
+                        </Link>
                     </nav>
                 </div>
             </header>
