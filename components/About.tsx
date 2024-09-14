@@ -37,9 +37,14 @@ export default function About() {
 
                         <div className="mt-8 flex flex-col items-center gap-y-4 gap-x-8 lg:flex-row ">
                             <article className="max-w-[320px] border-[1px] rounded-lg border-OrangeP bg-white py-5 px-5 gap-4  flex justify-center items-center">
-                                <div className="">
-                                    <img src="megaphone.png" alt="" />
-                                </div>
+                                {/* MEGAFONE EFEITO 360 */}
+                                <motion.div
+                                    className=""
+                                    whileHover={{ rotate: 360 }}
+                                    transition={{ duration: 1, ease: "easeInOut" }}
+                                >
+                                    <img src="megaphone.png" alt="Megafone" />
+                                </motion.div>
                                 <div className="border-r-[1px] h-[80px] border-OrangeP"></div>
                                 <div>
                                     <h1 className="uppercase text-GrayP font-Oswald text-lg">Elegância, Durabilidade, Qualidade e Estilo.</h1>
