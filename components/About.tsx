@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function About() {
     return (
         <>
-            <section id="about" className='AboutBG py-20'>
+            <section id="about" className='AboutBG py-20 autoH'>
                 <div className='maxWidth flex flex-col gap-x-6 lg:flex-row lg:items-start'>
 
                     <article className="relative lg:w-1/2">

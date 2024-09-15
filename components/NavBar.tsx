@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState, useEffect } from 'react';
-import { Link as ScrollLink } from 'react-scroll';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 

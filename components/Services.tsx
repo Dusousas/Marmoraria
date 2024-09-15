@@ -31,7 +31,7 @@ export default function Services() {
 
   return (
     <>
-      <section ref={sectionRef} id="services" className='bg-GrayP ServiceBG py-20'>
+      <section ref={sectionRef} id="services" className='bg-GrayP ServiceBG py-20 autoH'>
         <div className='maxWidth flex flex-col justify-center lg:flex-row lg:items-center'>
           
           {/* Animação para o artigo de texto */}

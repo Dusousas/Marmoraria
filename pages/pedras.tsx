@@ -9,7 +9,7 @@ export default function pedras() {
     <>
       <NavBar />
 
-      <section className='AboutBG relative top-[63px] py-20'>
+      <section className='AboutBG autoH py-20'>
         <div className='maxWidth'>
 
           <article className="flex justify-center gap-4">
@@ -22,11 +22,11 @@ export default function pedras() {
       </section>
       <Decorativo />
 
-      <div className="relative top-[63px] py-20">
+  
         <Contact />
         <Map />
         <Footer />
-      </div>
+     
     </>
   );
 }

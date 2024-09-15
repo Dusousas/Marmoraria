@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function Main() {
   return (
     <>
-      <section id="main" className='MainBG '>
+      <section id="main" className='MainBG autoH'>
         <div className='maxWidth flex flex-col items-center justify-center gap-10 h-full w-full text-white'>
           
           {/* Animação para o título h1 */}

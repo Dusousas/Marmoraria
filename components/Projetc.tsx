@@ -31,7 +31,7 @@ export default function Project() {
 
     return (
         <>
-            <section id="projects" className='ProjectBG py-20'>
+            <section id="projects" className='ProjectBG py-20 autoH'>
                 <div className='maxWidth'>
 
                     <article className="flex justify-center gap-4 lg:justify-start">
@@ -41,26 +41,26 @@ export default function Project() {
                     <p className="mt-4 text-center lg:text-left text-GrayPP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quia nemo delectus deleniti illum laborum corporis, minima corrupti accusamus aspernatur.</p>
 
                     {/* CAROUSEL */}
-                    <article className="mt-12 outline-none">
+                    <article className="mt-12">
                         <Slider {...settings}>
                             <div className="px-2">
-                                <a href="">
+                                <a href="/projetos/ProjetoBanheiro">
                                     <span className="bg-OrangeP block w-full text-center py-2 font-Oswald uppercase text-white">Banheiros</span>
-                                    <img src="Projeto1.jpg" alt="Projeto 1" className="" />
+                                    <img src="/Projeto1.jpg" alt="Projeto 1" className="" />
                                 </a>
                             </div>
 
                             <div className="px-2">
                                 <a href="">
                                     <span className="bg-OrangeP block w-full text-center py-2 font-Oswald uppercase text-white">Cozinhas</span>
-                                    <img src="Projeto1.jpg" alt="Projeto 1" className="" />
+                                    <img src="/Projeto1.jpg" alt="Projeto 1" className="" />
                                 </a>
                             </div>
 
                             <div className="px-2">
                                 <a href="">
                                     <span className="bg-OrangeP block text-center w-full py-2 font-Oswald uppercase text-white">Externos</span>
-                                    <img src="Projeto1.jpg" alt="Projeto 1" className="" />
+                                    <img src="/Projeto1.jpg" alt="Projeto 1" className="" />
                                 </a>
                             </div>
 

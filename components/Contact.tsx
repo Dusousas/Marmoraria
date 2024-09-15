@@ -31,7 +31,7 @@ export default function Contact() {
 
     return (
         <>
-            <section ref={sectionRef} id="contact" className='ContactBG pt-20 py-10'>
+            <section ref={sectionRef} id="contact" className='ContactBG pt-20 py-10 autoH'>
                 <div className='maxWidth flex flex-col lg:flex-row lg:gap-20 lg:justify-between'>
 
                     <motion.article 

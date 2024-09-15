@@ -1,7 +1,7 @@
 export default function Call() {
     return (
         <>
-            <section id="contact" className='bg-OrangeP py-20'>
+            <section id="contact" className='bg-OrangeP py-20 autoH'>
                 <div className='maxWidth text-center lg:flex lg:items-center lg:justify-center lg:gap-80'>
                     <article>
                         <h1 className="text-white text-5xl uppercase font-Oswald font-medium">Tem um projeto?</h1>

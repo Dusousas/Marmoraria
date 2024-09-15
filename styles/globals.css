@@ -8,8 +8,12 @@
   max-width: 1620px;
 }
 
-/* BACKGROUNDS */
+.autoH{
+  position: relative;
+  top: 62px;
+}
 
+/* BACKGROUNDS */
 .MainBG{
   background-image: url('../public/MainBG.jpg');
   background-size: cover;
@@ -47,7 +51,6 @@
 
 
 /* FORMULARIO */
-
 input::placeholder {
   color: #505050;
   font-weight: 500;
@@ -66,12 +69,12 @@ textarea::placeholder {
 
 .input-container .icon {
   position: absolute;
-  left: 10px; /* Ajuste conforme necessário */
+  left: 10px;
   pointer-events: none;
 }
 
 .input-container input {
-  padding-left: 40px; /* Ajuste para criar espaço suficiente para o ícone */
+  padding-left: 40px;
   width: 100%;
 }
 
