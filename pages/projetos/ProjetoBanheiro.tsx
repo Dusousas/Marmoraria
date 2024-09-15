@@ -5,14 +5,14 @@ import Slider from "react-slick";
 import { useRef } from "react";
 
 export default function ProjetoBanheiro() {
-  const sliderRef = useRef(null); // Criar uma referência para o slider
+  // Declara explicitamente o tipo do sliderRef
+  const sliderRef = useRef<Slider | null>(null);
 
   const settings = {
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-
     responsive: [
       {
         breakpoint: 1024,
@@ -88,13 +88,13 @@ export default function ProjetoBanheiro() {
             className="cursor-pointer absolute left-[54px] top-1/2 transform -translate-y-1/2"
             src="/setaL.png"
             alt="Seta Esquerda"
-            onClick={() => sliderRef.current.slickPrev()} // Navega para o slide anterior
+            onClick={() => sliderRef.current?.slickPrev()} // Navega para o slide anterior
           />
           <img
             className="cursor-pointer absolute right-[54px] top-1/2 transform -translate-y-1/2"
             src="/setaR.png"
             alt="Seta Direita"
-            onClick={() => sliderRef.current.slickNext()} // Navega para o próximo slide
+            onClick={() => sliderRef.current?.slickNext()} // Navega para o próximo slide
           />
         </article>
       </section>

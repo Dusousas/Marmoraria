@@ -4,7 +4,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
 
 export default function Project() {
-    const sliderRef = useRef(null);
+    // Adiciona o tipo correto para o sliderRef
+    const sliderRef = useRef<Slider | null>(null);
 
     const settings = {
         infinite: true,
@@ -52,13 +53,13 @@ export default function Project() {
                                 className="cursor-pointer w-[42px] h-[42px]"
                                 src="setaL.png"
                                 alt="Seta Esquerda"
-                                onClick={() => sliderRef.current.slickPrev()} // Função para ir ao slide anterior
+                                onClick={() => sliderRef.current?.slickPrev()} // Verifica se sliderRef.current existe
                             />
                             <img
                                 className="cursor-pointer w-[42px] h-[42px]"
                                 src="setaR.png"
                                 alt="Seta Direita"
-                                onClick={() => sliderRef.current.slickNext()} // Função para ir ao próximo slide
+                                onClick={() => sliderRef.current?.slickNext()} // Verifica se sliderRef.current existe
                             />
                         </article>
                     </article>
