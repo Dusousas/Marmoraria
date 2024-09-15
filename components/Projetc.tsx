@@ -47,17 +47,18 @@ export default function Project() {
                                 <p className="mt-4 text-center lg:text-left text-GrayPP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quia nemo delectus deleniti illum laborum corporis, minima corrupti accusamus aspernatur.</p>
                             </div>
                         </article>
+
                         {/* SETAS */}
                         <article className="flex gap-4 mt-8 items-center">
                             <img
                                 className="cursor-pointer w-[42px] h-[42px]"
-                                src="setaL.png"
+                                src="/setaL.png"
                                 alt="Seta Esquerda"
                                 onClick={() => sliderRef.current?.slickPrev()} // Verifica se sliderRef.current existe
                             />
                             <img
                                 className="cursor-pointer w-[42px] h-[42px]"
-                                src="setaR.png"
+                                src="/setaR.png"
                                 alt="Seta Direita"
                                 onClick={() => sliderRef.current?.slickNext()} // Verifica se sliderRef.current existe
                             />
@@ -65,7 +66,7 @@ export default function Project() {
                     </article>
 
                     {/* CAROUSEL */}
-                    <article className="mt-12">
+                    <article className="mt-12 mx-auto">
                         <Slider ref={sliderRef} {...settings}>
                             <div className="px-2">
                                 <a href="/projetos/ProjetoBanheiro">
@@ -93,6 +94,7 @@ export default function Project() {
                     <div className="flex justify-center">
                         <button className="bg-OrangeP uppercase rounded text-white py-4 px-4 mt-8 font-medium">Faça um orçamento</button>
                     </div>
+
                 </div>
             </section>
         </>
