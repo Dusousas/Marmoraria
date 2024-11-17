@@ -29,6 +29,13 @@ export default function Contact() {
         };
     }, []);
 
+    const contactDetails = [
+        { label: "Localização", icon: "pin.png", text: "Estrada do M'Boi Mirim, 1860" },
+        { label: "E-mail", icon: "pin.png", text: "vendas@pedraskarina.com.br" },
+        { label: "Telefone Vendas", icon: "pin.png", text: "(11) 5514-1409 | (11) 5514-1872" },
+        { label: "Telefone | Fax", icon: "pin.png", text: "(11) 5515-0781 | (11) 5514-1409" },
+    ];
+
     return (
         <>
             <section ref={sectionRef} id="contact" className='ContactBG pt-20 py-10 autoH'>
@@ -42,24 +49,28 @@ export default function Contact() {
                     >
                         <div className="flex justify-center gap-4 lg:justify-start">
                             <div className="border-r-4 border-OrangeP" />
-                            <h1 className="font-Oswald text-white text-center font-bold uppercase text-5xl lg:text-left">Preencha o formulário e dê o primeiro passo para um grande negócio!</h1>
+                            <h1 className="font-Oswald text-white text-center font-bold uppercase text-5xl lg:text-left">
+                                Preencha o formulário e dê o primeiro passo para um grande negócio!
+                            </h1>
                         </div>
-                        <p className="text-center mt-8 lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, accusamus. Minus impedit quo maiores, perspiciatis reprehenderit est delectus ut sequi.</p>
-                        <div className="mt-12 flex flex-col gap-y-4 gap-x-8 justify-center items-center lg:flex-row lg:flex-wrap lg:justify-start ">
-                            {["Localização", "E-mail", "Telefone", "Instagram"].map((label, index) => (
+                        <p className="text-center mt-8 lg:text-left">
+                            Solicite seu orçamento e descubra como nossos produtos podem transformar seus projetos em sucesso!
+                        </p>
+                        <div className="mt-12 flex flex-col gap-y-4 gap-x-8 justify-center items-center lg:flex-row lg:flex-wrap lg:justify-start">
+                            {contactDetails.map(({ label, icon, text }, index) => (
                                 <motion.article
                                     key={index}
-                                    className="flex items-center gap-4"
+                                    className="flex items-center gap-4 w-[350px]"
                                     initial={{ opacity: 0, y: 50 }}
                                     animate={isVisible ? { opacity: 1, y: 0 } : {}}
                                     transition={{ duration: 0.8, delay: index * 0.2 }}
                                 >
-                                    <div className="bg-white w-[60px] flex items-center justify-center py-4  border-r-2 border-b-2 border-OrangeP inset-0">
-                                        <img src="pin.png" alt={label} />
+                                    <div className="bg-white w-[60px] flex items-center justify-center py-4 border-r-2 border-b-2 border-OrangeP inset-0">
+                                        <img src={icon} alt={label} />
                                     </div>
                                     <div>
                                         <p>{label}</p>
-                                        <h1 className="font-Oswald text-lg">Estrada do M'Boi Mirim, 1860</h1>
+                                        <h1 className="font-Oswald text-lg">{text}</h1>
                                     </div>
                                 </motion.article>
                             ))}
@@ -67,27 +78,36 @@ export default function Contact() {
                     </motion.article>
 
                     <motion.article 
-                        className="bg-white py-8 px-8 w-[340px] lg:w-[450px]  mx-auto mt-8"
+                        className="bg-white py-8 px-8 w-[340px] lg:w-[450px] mx-auto mt-8"
                         initial={{ opacity: 0, y: 50 }}
                         animate={isVisible ? { opacity: 1, y: 0 } : {}}
                         transition={{ duration: 0.8 }}
                     >
                         <form className="font-Releway flex flex-col gap-4" action="">
-                            <h1 className="font-Oswald text-GrayS text-center font-bold uppercase text-xl lg:text-left">Entre em contato!</h1>
+                            <h1 className="font-Oswald text-GrayS text-center font-bold uppercase text-xl lg:text-left">
+                                Entre em contato!
+                            </h1>
 
                             {["Nome Completo", "Telefone", "E-mail"].map((placeholder, index) => (
                                 <div key={index} className="input-container">
                                     <div className="icon">
                                         <img className="w-[20px]" src="user.png" alt={placeholder} />
                                     </div>
-                                    <input className="border-[1px] w-full outline-none py-3 px-4 border-OrangeP" type="text" placeholder={placeholder} />
+                                    <input 
+                                        className="border-[1px] w-full outline-none py-3 px-4 border-OrangeP" 
+                                        type="text" 
+                                        placeholder={placeholder} 
+                                    />
                                 </div>
                             ))}
 
-                            <textarea className="border-[1px] w-full outline-none resize-none h-[120px] py-3 px-4 border-OrangeP" placeholder="Diga um pouco mais"></textarea>
+                            <textarea 
+                                className="border-[1px] w-full outline-none resize-none h-[120px] py-3 px-4 border-OrangeP" 
+                                placeholder="Diga um pouco mais"
+                            ></textarea>
 
                             <div className="flex justify-start">
-                                <button className=" bg-OrangeP uppercase rounded py-2 px-4 text-white font-normal">Enviar</button>
+                                <button className="bg-OrangeP uppercase rounded py-2 px-4 text-white font-normal">Enviar</button>
                             </div>
                         </form>
                     </motion.article>

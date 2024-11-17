@@ -21,8 +21,6 @@ export default function pedras() {
         </div>
       </section>
       <Decorativo />
-
-  
         <Contact />
         <Map />
         <Footer />

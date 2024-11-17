@@ -81,11 +81,14 @@ export default function ProjetoBanheiro() {
           <article id="projects" className="relative"> {/* Adicionei position relative */}
             <div className="maxWidth">
 
-              <article className="pb-20 ">
-                <Slider className="outline mx-auto max-w-[90%]" {...settings} ref={sliderRef}>
-                    <img src="/banheiro1.jpg" alt="Projeto 1" className="mx-auto text-ce" />
+
+              <article className="pb-20 outline">
+                <Slider className="mx-auto max-w-[90%] outline" {...settings} ref={sliderRef}>
+                 
+                    <img src="/banheiro1.jpg" alt="Projeto 1" className="mx-auto " />
                     <img src="/banheiro1.jpg" alt="Projeto 1" className="mx-auto" />
                     <img src="/banheiro1.jpg" alt="Projeto 1" className="mx-auto" />
+                 
                 </Slider>
 
                 {/* Setas de navegação */}

@@ -16,11 +16,11 @@ export default function About() {
                                 }}
                                 transition={{
                                     duration: 2,
-                                    repeat: Infinity, 
-                                    ease: "easeInOut", 
+                                    repeat: Infinity,
+                                    ease: "easeInOut",
                                 }}
                             >
-                                <h1 className="text-OrangeP font-black font-Oswald text-5xl">25+</h1>
+                                <h1 className="text-OrangeP font-black font-Oswald text-5xl">30+</h1>
                                 <h1 className="text-GrayS font-Oswald uppercase font-black text-lg">
                                     Anos de experiência
                                 </h1>
@@ -50,13 +50,13 @@ export default function About() {
                                     <h1 className="uppercase text-GrayP font-Oswald text-lg">Elegância, Durabilidade, Qualidade e Estilo.</h1>
                                 </div>
                             </article>
-                            <article>
+                            {/* <article>
                                 <h1 className="text-GrayP font-semibold">Raihawly Williamson</h1>
                                 <p className="text-GrayPP">CEO, digitex Inc.</p>
                                 <div>
                                     <img src="sing.webp" alt="" />
                                 </div>
-                            </article>
+                            </article> */}
                         </div>
 
                         <div className="mt-8 flex flex-col gap-y-3">
@@ -71,21 +71,21 @@ export default function About() {
                                 <div>
                                     <img src="verifica.png" alt="" />
                                 </div>
-                                <h1 className="text-GrayP font-Oswald font-medium">100% de Clientes Satisfeitos</h1>
+                                <h1 className="text-GrayP font-Oswald font-medium">100% de Entrega no Prazo Garantido</h1>
                             </article>
 
                             <article className="flex items-center gap-x-2 ">
                                 <div>
                                     <img src="verifica.png" alt="" />
                                 </div>
-                                <h1 className="text-GrayP font-Oswald font-medium">100% de Clientes Satisfeitos</h1>
+                                <h1 className="text-GrayP font-Oswald font-medium">100% de Garantia de Satisfação em Cada Projeto</h1>
                             </article>
 
                             <article className="flex items-center gap-x-2 ">
                                 <div>
                                     <img src="verifica.png" alt="" />
                                 </div>
-                                <h1 className="text-GrayP font-Oswald font-medium">100% de Clientes Satisfeitos</h1>
+                                <h1 className="text-GrayP font-Oswald font-medium">100% de Atendimento Exclusivo e Personalizado</h1>
                             </article>
                         </div>
 

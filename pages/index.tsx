@@ -7,6 +7,7 @@ import Map from "@/components/Map";
 import NavBar from "@/components/NavBar";
 import Projetc from "@/components/Projetc";
 import Services from "@/components/Services";
+import Whatsapp from "@/components/subcomponents/Whatsapp";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Map />
       <Call />
       <Footer />
+      <Whatsapp />
     </>
   );
 }

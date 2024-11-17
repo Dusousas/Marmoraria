@@ -60,7 +60,7 @@ const NavBar: React.FC = () => {
             <header className="py-3 bg-white fixed w-full z-20">
                 <div className="flex justify-between items-center maxWidth">
                     <div>
-                        <a className='text-black uppercase font-black text-2xl font-Oswald ' href="#">Sua Concessionária</a>
+                        <a className='text-black uppercase font-black text-2xl font-Oswald ' href="#">Karina Marmoraria</a>
                     </div>
                     <div className="lg:hidden">
                         <button onClick={toggleMenu} className="text-black focus:outline-none">

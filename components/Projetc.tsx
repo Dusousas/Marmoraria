@@ -44,7 +44,7 @@ export default function Project() {
                                 <h1 className="font-Oswald text-GrayP font-bold uppercase text-5xl lg:text-left">Projetos Realizados</h1>
                             </div>
                             <div>
-                                <p className="mt-4 text-center lg:text-left text-GrayPP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem quia nemo delectus deleniti illum laborum corporis, minima corrupti accusamus aspernatur.</p>
+                                <p className="mt-4 text-center lg:text-left text-GrayPP">Projetos em Mármore com Exportação Própria: Unindo o Melhor de Produtos Nacionais e Internacionais.</p>
                             </div>
                         </article>
 
