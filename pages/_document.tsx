@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <title>Marmoraria Karina | Zona Sul</title>
-      <link rel="icon" href="favicon.png" type="image/x-icon" />
+      <link rel="icon" href="favicon.png" type="Icon Pedras Karina" />
 
       <meta name="description" content="Encontre qualidade e sofisticação em cada peça de mármore e granito na nossa marmoraria, localizada na Zona Sul de SP. Oferecemos materiais de alta durabilidade e beleza para sua casa ou empresa. Transforme seus projetos com o melhor da marmoraria. Solicite seu orçamento!" />
       <meta name="author" content="Agência You on" />
