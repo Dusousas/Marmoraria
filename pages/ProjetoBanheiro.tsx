@@ -2,6 +2,7 @@ import { useState } from "react";
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import Project from "@/components/Projetc";
+import Whatsapp from "@/components/subcomponents/Whatsapp";
 
 interface Image {
   src: string;
@@ -104,6 +105,8 @@ export default function ProjetoBanheiro() {
       </section>
       <Project />
       <Footer />
+      <Whatsapp />
+
     </>
   );
 }

@@ -3,6 +3,7 @@ import Decorativo from "@/components/Decorativo";
 import Footer from "@/components/Footer";
 import Map from "@/components/Map";
 import NavBar from "@/components/NavBar";
+import Whatsapp from "@/components/subcomponents/Whatsapp";
 
 export default function pedras() {
   return (
@@ -24,6 +25,7 @@ export default function pedras() {
         <Contact />
         <Map />
         <Footer />
+        <Whatsapp />
      
     </>
   );
